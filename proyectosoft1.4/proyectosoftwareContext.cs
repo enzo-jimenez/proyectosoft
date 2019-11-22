@@ -173,7 +173,9 @@ namespace proyectosoft1._4
 
                 entity.Property(e => e.ComUbicacion).HasColumnName("comUbicacion");
 
-                entity.Property(e => e.ComUsId).HasColumnName("comUsId");
+                entity.Property(e => e.ComUsId)
+                    .HasColumnName("comUsId")
+                    .HasMaxLength(450);
 
                 entity.HasOne(d => d.ComPro)
                     .WithMany(p => p.Comercio)
@@ -184,6 +186,11 @@ namespace proyectosoft1._4
                     .WithMany(p => p.Comercio)
                     .HasForeignKey(d => d.ComUbId)
                     .HasConstraintName("FK_Comercio_Ubicacion");
+
+                entity.HasOne(d => d.ComUs)
+                    .WithMany(p => p.Comercio)
+                    .HasForeignKey(d => d.ComUsId)
+                    .HasConstraintName("FK_Comercio_AspNetUsers");
             });
 
             modelBuilder.Entity<Producto>(entity =>
