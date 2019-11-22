@@ -11,6 +11,7 @@ namespace proyectosoft1._4.Models
             AspNetUserLogins = new HashSet<AspNetUserLogins>();
             AspNetUserRoles = new HashSet<AspNetUserRoles>();
             AspNetUserTokens = new HashSet<AspNetUserTokens>();
+            Comercio = new HashSet<Comercio>();
         }
 
         public string Id { get; set; }
@@ -33,5 +34,6 @@ namespace proyectosoft1._4.Models
         public virtual ICollection<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual ICollection<AspNetUserRoles> AspNetUserRoles { get; set; }
         public virtual ICollection<AspNetUserTokens> AspNetUserTokens { get; set; }
+        public virtual ICollection<Comercio> Comercio { get; set; }
     }
 }

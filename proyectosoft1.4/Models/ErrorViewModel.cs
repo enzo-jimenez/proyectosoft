@@ -1,4 +1,7 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace proyectosoft1._4.Models
 {
@@ -9,3 +12,4 @@ namespace proyectosoft1._4.Models
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
+

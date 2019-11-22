@@ -11,11 +11,12 @@ namespace proyectosoft1._4.Models
         public IGeometry ComUbicacion { get; set; }
         public string ComDescripcion { get; set; }
         public string ComDireccion { get; set; }
-        public int? ComUsId { get; set; }
+        public string ComUsId { get; set; }
         public string ComUbId { get; set; }
         public string ComProId { get; set; }
 
         public virtual Producto ComPro { get; set; }
         public virtual Ubicacion ComUb { get; set; }
+        public virtual AspNetUsers ComUs { get; set; }
     }
 }
