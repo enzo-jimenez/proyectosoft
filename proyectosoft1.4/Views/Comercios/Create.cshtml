@@ -1,0 +1,65 @@
+﻿@model proyectosoft1._4.Models.Comercio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Comercio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ComId" class="control-label"></label>
+                <input asp-for="ComId" class="form-control" />
+                <span asp-validation-for="ComId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComNombre" class="control-label"></label>
+                <input asp-for="ComNombre" class="form-control" />
+                <span asp-validation-for="ComNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComUbicacion" class="control-label"></label>
+                <input asp-for="ComUbicacion" class="form-control" />
+                <span asp-validation-for="ComUbicacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComDescripcion" class="control-label"></label>
+                <input asp-for="ComDescripcion" class="form-control" />
+                <span asp-validation-for="ComDescripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComDireccion" class="control-label"></label>
+                <input asp-for="ComDireccion" class="form-control" />
+                <span asp-validation-for="ComDireccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComUsId" class="control-label"></label>
+                <select asp-for="ComUsId" class ="form-control" asp-items="ViewBag.ComUsId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComUbId" class="control-label"></label>
+                <select asp-for="ComUbId" class ="form-control" asp-items="ViewBag.ComUbId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComProId" class="control-label"></label>
+                <select asp-for="ComProId" class ="form-control" asp-items="ViewBag.ComProId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

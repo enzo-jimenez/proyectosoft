@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using proyectosoft1._4.Models;
 
-namespace proyectosoft1._4
+
+namespace proyectosoft1._4.Models
 {
     public partial class proyectosoftwareContext : DbContext
     {
