@@ -1,38 +1,38 @@
 ﻿@model proyectosoft1._4.Models.Comercio
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>Comercio</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 ">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ComId" />
             <div class="form-group">
-                <label asp-for="ComNombre" class="control-label"></label>
+                <label asp-for="ComNombre" class="control-label">Nombre</label>
                 <input asp-for="ComNombre" class="form-control" />
                 <span asp-validation-for="ComNombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ComUbicacion" class="control-label"></label>
+                <label asp-for="ComUbicacion" class="control-label">Ubicacion</label>
                 <input asp-for="ComUbicacion" class="form-control" />
                 <span asp-validation-for="ComUbicacion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ComDescripcion" class="control-label"></label>
+                <label asp-for="ComDescripcion" class="control-label">Descripcion</label>
                 <input asp-for="ComDescripcion" class="form-control" />
                 <span asp-validation-for="ComDescripcion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ComDireccion" class="control-label"></label>
+                <label asp-for="ComDireccion" class="control-label">Direccion</label>
                 <input asp-for="ComDireccion" class="form-control" />
                 <span asp-validation-for="ComDireccion" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="ComUsId" class="control-label"></label>
                 <select asp-for="ComUsId" class="form-control" asp-items="ViewBag.ComUsId"></select>
@@ -48,15 +48,16 @@
                 <select asp-for="ComProId" class="form-control" asp-items="ViewBag.ComProId"></select>
                 <span asp-validation-for="ComProId" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

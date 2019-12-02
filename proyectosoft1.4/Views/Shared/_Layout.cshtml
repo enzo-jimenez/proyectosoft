@@ -26,13 +26,19 @@
             color: #333333;
             font-family: Impact, Charcoal, sans-serif;
         }
+
+        .navito{
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }​
+
     </style>
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
-            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">*@
+    <header class="py-5">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top navito"> 
             <div class="container">
                 <a class="navbar-brand py-2" asp-area="" asp-controller="Home" asp-action="Index">Precios Ya</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -43,8 +49,8 @@
                     <partial name="_LoginPartial" />
                     <div class="navbar-nav ml-auto mr-auto text-center">
                         <a class="nav-item nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                        <a class="nav-item nav-link" asp-area="" asp-controller="Productoes" asp-action="Index">Productos</a>
-                        <a class="nav-item nav-link" asp-area="" asp-controller="Comercios" asp-action="Index">Mi comercio</a>
+                        @*<a class="nav-item nav-link" asp-area="" asp-controller="Productoes" asp-action="Index">Productos</a>
+                        <a class="nav-item nav-link" asp-area="" asp-controller="Comercios" asp-action="Index">Mi comercio</a>*@
 
                     </div>
                 </div>
@@ -60,7 +66,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - proyectosoft1._4 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2019 - Precios Ya
         </div>
     </footer>
 

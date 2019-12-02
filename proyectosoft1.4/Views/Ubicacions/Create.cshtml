@@ -1,36 +1,35 @@
 ﻿@model proyectosoft1._4.Models.Ubicacion
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear ubicacion";
 }
 
-<h1>Create</h1>
+<h1>Crear ubicacion</h1>
 
-<h4>Ubicacion</h4>
-<hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UbId" class="control-label"></label>
+                <label asp-for="UbId" class="control-label">ID</label>
                 <input asp-for="UbId" class="form-control" />
                 <span asp-validation-for="UbId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="UbUbicacion" class="control-label"></label>
+                <label asp-for="UbUbicacion" class="control-label">Ubicacion</label>
                 <input asp-for="UbUbicacion" class="form-control" />
                 <span asp-validation-for="UbUbicacion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

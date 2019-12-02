@@ -1,53 +1,163 @@
 ﻿@model IEnumerable<proyectosoft1._4.Models.Producto>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Productos";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProNombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProPrecio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProDisponible)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProDescripcion)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProNombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProPrecio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProDisponible)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProDescripcion)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ProId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProId">Delete</a>
-            </td>
-        </tr>
+@if (SignInManager.IsSignedIn(User))
+{
+    <h1 class="mb-4">Productos</h1>
+
+    <p>
+        <a asp-action="Create"><button type="button" class="btn btn-info">Agregar producto</button></a>
+    </p>
+
+    <form asp-controller="Productoes" asp-action="Index">
+        <p>
+            <div class="input-group mb-3 mt-5">
+                <input type="text" name="busqueda" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="basic-addon2" class="col-5">
+                <div class="input-group-append">
+                    <button type="submit" value="Filter" class="btn btn-outline-secondary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </p>
+    </form>
+
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Precio
+                </th>
+                <th>
+                    Disponible
+                <th>
+                    Descripcion
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProNombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProPrecio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProDisponible)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProDescripcion)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ProId">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.ProId">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ProId">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
-    </tbody>
-</table>
+
+else
+{
+    <h1 class="mb-4">Productos</h1>
+
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-6">
+
+                @*Buscador*@
+
+                <form asp-controller="Productoes" asp-action="Index">
+                    <p>
+                        <div class="input-group mb-3 mt-5">
+                            <input type="text" name="busqueda" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="basic-addon2" class="col-7">
+                            <div class="input-group-append">
+                                <button type="submit" value="Filter" class="btn btn-outline-secondary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </p>
+                </form>
+
+                @*Tabla*@
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Precio
+                            </th>
+                            <th>
+                                Disponible
+                            <th>
+                                Descripcion
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProNombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProPrecio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProDisponible)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProDescripcion)
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @*MAPA*@
+
+            <div class="col-6">
+                <h1>MAPA----------------------------------------------------------------------------------------------</h1>
+            </div>
+
+
+
+        </div>
+        </div>
+
+
+
+        }

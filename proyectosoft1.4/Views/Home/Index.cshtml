@@ -3,136 +3,128 @@
 }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
+
+@*<style>
+    .bunge{ font-family: 'Bungee', cursive;}
+</style>
+
+<div class="bunge text-center ">
+    <span size="7" style="color:black";>Precios</span><span size="7" style="color:red";>Ya</span>
+</div>*@ 
+
+
+    <h1 class="text-center classname">Busca los mejores productos!</h1>
+
+
+    <form asp-controller="Productoes" asp-action="Index">
+        <p>
+            <div class="input-group mb-3 mt-5 justify-content-center">
+                <input type="text" name="busqueda" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="basic-addon2" class="col-6">
+                <div class="input-group-append">
+                    <button type="submit" value="Filter" class="btn btn-outline-secondary">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </p>
+    </form>
 
 
 
-<h1 class="text-center mt-5 classname">Busca los mejores productos!</h1>
 
 
-<form asp-controller="Productoes" asp-action="Index">
-    <p>
-        <div class="input-group mb-3 mt-5 justify-content-center">
-            <input type="text" name="busqueda" placeholder="Nombre del producto..." aria-label="Recipient's username" aria-describedby="basic-addon2" class="col-6">
-            <div class="input-group-append">
-                <button type="submit" value="Filter" class="btn btn-outline-secondary">
-                    <i class="fa fa-search"></i>
-                </button>
+
+    <!-- START THE FEATURETTES -->
+    <div class="py-4">
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Encontra los mejores precios de los productos que buscas. <span class="text-muted">Hacelo</span></h2>
+                <p class="lead">Con Precios Ya busca los productos que desees y compara los precios con los comercios cercanos.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="https://www.medyacebimde.com/doc_path_3/TURKBASINI/INTERNET/EKLENTI_ARSIVI/2018/9/3/10/76078525_cover.jpeg" />
             </div>
         </div>
-    </p>
-</form>
 
+        <hr class="featurette-divider">
 
-
-
-
-
-<!-- START THE FEATURETTES -->
-<div class="py-4">
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">Encontra los mejores precios de los productos que buscas. <span class="text-muted">Hacelo</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Registra tu comercio y obtene beneficios. <span class="text-muted">Vamos!</span></h2>
+                <p class="lead">Si tenes un comercio, Precios Ya es la mejor opcion para vender y que tu comercio sea conocido.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F53399370%2F239491876609%2F1%2Foriginal.jpg?h=200&w=450&auto=compress&rect=0%2C3%2C298%2C149&s=0a630b5c18c96ea4f3884edf22fd4c04" />
+            </div>
         </div>
-        <div class="col-md-5">
-            <img src="https://www.medyacebimde.com/doc_path_3/TURKBASINI/INTERNET/EKLENTI_ARSIVI/2018/9/3/10/76078525_cover.jpeg" />
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">
+                    Busca los productos y comercios mas cercanos a tu ubicación. <span class="text-muted">
+                        Disfruta
+                        !
+                    </span>
+                </h2>
+                <p class="lead">Hace tus reseñas de los comercios que visitas y suma puntos.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="http://newyorkbusinessexcellence.com/images/haberler/t_yillik-enflasyon-yuzde-18-71-e-dustu.jpg" />
+            </div>
         </div>
+
+        <hr class="featurette-divider">
     </div>
+    <!-- /END THE FEATURETTES -->
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Registra tu comercio y obtene beneficios. <span class="text-muted">Vamos!</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-            <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F53399370%2F239491876609%2F1%2Foriginal.jpg?h=200&w=450&auto=compress&rect=0%2C3%2C298%2C149&s=0a630b5c18c96ea4f3884edf22fd4c04" />
-        </div>
+
+
+
+
+    <h1 class="text-center py-5 classname"><u>Comercios adheridos</u></h1>
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing text-center">
+
+        <!-- 4 columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_Jumbo_Cencosud.png">
+                <h2>Jumbo</h2>
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://promosdelbanco.com/wp-content/uploads/2017/04/Carrefour-Supermercados.png">
+                <h2>Carrefour</h2>
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.grupoharasdelsur.com/intranet/images/coto-prod.jpg">
+                <h2>Coto</h2>
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3 pb-5">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Disco-Supermarket-Logo.svg/1200px-Disco-Supermarket-Logo.svg.png">
+                <h2>Disco</h2>
+
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <!-- 4 columns of text below the carousel -->
+        <!-- /.row -->
+
+
+
+
+
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading"> Busca los productos y comercios mas cercanos a tu ubicación. <span class="text-muted">Disfruta!</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img src="http://newyorkbusinessexcellence.com/images/haberler/t_yillik-enflasyon-yuzde-18-71-e-dustu.jpg" />
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-</div>
-<!-- /END THE FEATURETTES -->
-
-
-
-
-
-
-<h1 class="text-center py-5 classname"><u>Comercios adheridos</u></h1>
-
-
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-
-    <!-- 4 columns of text below the carousel -->
-    <div class="row">
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.grupoharasdelsur.com/intranet/images/coto-prod.jpg">
-            <h2>Coto</h2>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://promosdelbanco.com/wp-content/uploads/2017/04/Carrefour-Supermercados.png">
-            <h2>Carrefour</h2>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.grupoharasdelsur.com/intranet/images/coto-prod.jpg">
-            <h2>Coto</h2>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://promosdelbanco.com/wp-content/uploads/2017/04/Carrefour-Supermercados.png">
-            <h2>Carrefour</h2>
-
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-    <!-- 4 columns of text below the carousel -->
-    <div class="row py-5">
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.grupoharasdelsur.com/intranet/images/coto-prod.jpg">
-            <h2>Coto</h2>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://promosdelbanco.com/wp-content/uploads/2017/04/Carrefour-Supermercados.png">
-            <h2>Carrefour</h2>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.grupoharasdelsur.com/intranet/images/coto-prod.jpg">
-            <h2>Coto</h2>
-
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://promosdelbanco.com/wp-content/uploads/2017/04/Carrefour-Supermercados.png">
-            <h2>Carrefour</h2>
-
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-
-
-
-</div>
